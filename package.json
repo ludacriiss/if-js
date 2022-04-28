@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "prettier": "prettier --write **/*.js",
+    "lint": "eslint --debug",
+    "lint:write": "eslint --debug --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^7.0.4",
+    "prettier": "2.6.2"
+  }
+}
