@@ -80,3 +80,30 @@ function replaceZero(number) {
   return number;
 }
 console.log(numbers.map(replaceZero));
+//lesson-4
+//part 1
+function curry(f) {
+  return function (a) {
+    return function (b) {
+      return f(a, b);
+    };
+  };
+}
+function sum(a, b) {
+  return a + b;
+}
+let curriedSum = curry(sum);
+console.log(curriedSum(5)(2));
+
+//part 2
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+//Первый абзац
+let testColors1 = document.querySelector('#text1');
+let i = 0;
+testColors1.onclick = () => (testColors1.style.background = colors[++i % colors.length]);
+//Второй абзац
+let testColors2 = document.querySelector('#text2');
+testColors2.onclick = () => (testColors2.style.background = colors[++i % colors.length]);
+//Третий абзац
+let testColors3 = document.querySelector('#text3');
+testColors3.onclick = () => (testColors3.style.background = colors[++i % colors.length]);
