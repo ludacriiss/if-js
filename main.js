@@ -82,7 +82,7 @@ function replaceZero(number) {
 console.log(numbers.map(replaceZero));
 //lesson-5
 //part 1
-let date = '2020 - 11 - 16';
+const date = '2020-11-16';
 let res = date.split('-').reverse().join('.');
 console.log(res);
 //part 2
@@ -141,5 +141,4 @@ function searchText(array, str) {
   }
   return result;
 }
-searchText(data,'Germany');
 console.log(searchText(data,'Bali'));
