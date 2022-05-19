@@ -80,3 +80,66 @@ function replaceZero(number) {
   return number;
 }
 console.log(numbers.map(replaceZero));
+//lesson-5
+//part 1
+let date = '2020 - 11 - 16';
+let res = date.split('-').reverse().join('.');
+console.log(res);
+//part 2
+const data = [
+  {
+    country: 'Russia',
+    city: 'Saint Petersburg',
+    hotel: 'Hotel Leopold',
+  },
+  {
+    country: 'Spain',
+    city: 'Santa Cruz de Tenerife',
+    hotel: 'Apartment Sunshine',
+  },
+  {
+    country: 'Slowakia',
+    city: 'Vysokie Tatry',
+    hotel: 'Villa Kunerad',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hostel Friendship',
+  },
+  {
+    country: 'Indonesia',
+    city: 'Bali',
+    hotel: 'Ubud Bali Resort&SPA',
+  },
+  {
+    country: 'Netherlands',
+    city: 'Rotterdam',
+    hotel: 'King Kong Hostel',
+  },
+  {
+    country: 'Marocco',
+    city: 'Ourika',
+    hotel: 'Rokoko Hotel',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hotel Rehberge Berlin Mitte',
+  },
+];
+
+function searchText(array, str) {
+  const result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const currentItem = `${array[i].country}, ${array[i].city}, ${array[i].hotel}`;
+
+    if (currentItem.includes(str)) {
+      result.push(currentItem);
+    }
+  }
+  return result;
+}
+searchText(data,'Germany');
+console.log(searchText(data,'Bali'));
