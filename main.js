@@ -35,14 +35,19 @@ for (let i = 0; i < num.length; i++) {
 }
 //lesson-3
 //part 1
-function palindrome(str) {
-  str = str.toLowerCase().replace(/\s/g, '');
-  return str === str.split('').reverse().join('');
-}
-console.log(palindrome('racecar')); //true
-console.log(palindrome('magazine')); //false
-console.log(palindrome('Bob')); //true
-console.log(palindrome('Madam Im Adam')); //true
+
+
+// function palindrome(str) {
+//   str = str.toLowerCase().replace(/\s/g, '');
+//   return str === str.split('').reverse().join('');
+// }
+//
+// console.log(palindrome('racecar')); //true
+// console.log(palindrome('magazine')); //false
+// console.log(palindrome('Bob')); //true
+// console.log(palindrome('Madam Im Adam')); //true
+
+
 //part 2
 //Возвращение минимального значения
 function min(a, b) {
@@ -176,3 +181,14 @@ function searchText(array, str) {
   return result;
 }
 console.log(searchText(data,'Bali'));
+
+
+
+
+
+
+
+
+
+
+
