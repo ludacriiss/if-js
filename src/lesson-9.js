@@ -1,34 +1,31 @@
-const element1 = document.getElementById('text1');
-const element2 = document.getElementById('text2');
-const element3 = document.getElementById('text3');
-const elemArray = [element1, element2, element3];
+const elements = document.getElementsByTagName('p');
 
 const colors = {
     data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
-
-    counter: 0,
-
     [Symbol.iterator]() {
         return this;
     },
-
-    next() {
-        if (this.counter < this.data.length) {
-            const start = this.data[(this.counter += 1)];
-            return { value: start, done: false };
+    next(idElement) {
+        if (this.idElement === undefined) {
+            this.idElement = 0;
         }
-
-        if (this.counter === this.data.length) {
-            const end = this.data[(this.counter = 0)];
-            return { value: end, done: false };
+        if (this[idElement] <= this.data.length - 1) {
+            return {
+                done: false,
+                value: this.data[this[idElement]++],
+            };
+        } else {
+            this[idElement] = 0;
+            return {
+                done: false,
+                value: this.data[this[idElement]++],
+            };
         }
-
-        return { done: true };
     },
 };
 
-for (let i = 0; i < elemArray.length; i += 1) {
-    elemArray[i].addEventListener('click', (event) => {
-        event.target.style.color = colors.next().value;
+for (const text of elements) {
+    text.addEventListener('click', () => {
+        text.style.color = colors.next(text.id).value;
     });
 }
