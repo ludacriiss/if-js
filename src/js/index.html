@@ -64,11 +64,59 @@
             </label>
             <input class="menu__item" type="date" id="check" />
           </div>
-          <input class="menu__item menu__item--people" type="text" placeholder="2 Adults — 0 Children — 1 Room" />
+          <input class="menu__item menu__item--people" id="children" type="text" placeholder="2 Adults — 0 Children — 1 Room" />
           <button class="menu__item menu__item--button" type="submit">
             Search
           </button>
         </form>
+
+
+        <div class="form__filter--container" id="filter">
+          <div class="form__filter">
+
+            <div class="form__filter--wrap">
+              <div class="form__filter--capture">
+                <p class="form__filter--text">Adults</p>
+              </div>
+              <div class="form__filter--counter">
+                <button class="form__btn--minus">-</button>
+                <p class="form__filter--value adults">0</p>
+                <button class="form__btn--plus" data-max="30">+</button>
+              </div>
+            </div>
+
+            <div class="form__filter--wrap">
+              <div class="form__filter--capture">
+                <p class="form__filter__text">Children</p>
+              </div>
+              <div class="form__filter--counter">
+                <button class="form__btn--minus remove__child">-</button>
+                <p class="form__filter--value children">0</p>
+                <button class="form__btn--plus add__child" data-max="10">+</button>
+              </div>
+            </div>
+
+            <div class="form__filter--wrap">
+              <div class="form__filter--capture">
+                <p class="form__filter--text">Rooms</p>
+              </div>
+              <div class="form__filter--counter">
+                <button class="form__btn--minus">-</button>
+                <p class="form__filter--value rooms">0</p>
+                <button class="form__btn--plus" data-max="30">+</button>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="form__children">
+            <h4 class="form__children--title">What is the age of the child you’re travelling with?</h4>
+            <div class="form__children--box">
+            </div>
+
+          </div>
+
+        </div>
         <div class="container">
           <div class="social">
             <a class="social__item" href="#">
@@ -81,6 +129,9 @@
         </div>
       </div>
     </div>
+
+
+
   </section>
   <section class="features">
     <div class="container">
@@ -415,5 +466,6 @@
   </div>
 </footer>
 <script src="lesson-ten.js"></script>
+<script src="lesson-11.js"></script>
 </body>
 </html>
