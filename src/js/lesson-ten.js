@@ -64,17 +64,17 @@ const data = [
             'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/the-andaman-resort_d2xksj.jpg',
     },
 ];
-const parent = document.querySelector('.homes__inner')
-
-const render = data.map((item) =>
-
-    `<div class="homes__item">
-         <img class="homes__icon" src=${item.imageUrl} alt="${item.name}" />
-         <div class="homes__name">${item.name}</div>
-         <div class="homes__location">${item.country} ${item.city}</div>
-       </div>`
-
-)
-
-parent.insertAdjacentHTML("afterbegin", render)
+// const parent = document.querySelector('.homes__inner')
+//
+// const render = data.map((item) =>
+//
+//     `<div class="homes__item">
+//          <img class="homes__icon" src=${item.imageUrl} alt="${item.name}" />
+//          <div class="homes__name">${item.name}</div>
+//          <div class="homes__location">${item.country} ${item.city}</div>
+//        </div>`
+//
+// )
+//
+// parent.insertAdjacentHTML("afterbegin", render)
 
